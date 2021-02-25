@@ -1,21 +1,21 @@
-import React from 'react'
-import Head from 'next/head'
-import useTranslation from 'next-translate/useTranslation'
+import React from "react";
+import Head from "next/head";
+import useTranslation from "next-translate/useTranslation";
 
-export default function Layout(props) {
-  const { t } = useTranslation()
+export const Layout = (props) => {
+  const { t } = useTranslation();
 
   return (
     <div className="container">
       <Head>
-        <title>{t('common:title')}</title>
+        <title>{t("common:title")}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       {props.children}
 
       <footer>
-        <span>{t('common:powered')} </span>
+        <span>{t("common:powered")} </span>
         <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
           ▲ vercel
         </a>
@@ -89,5 +89,5 @@ export default function Layout(props) {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
